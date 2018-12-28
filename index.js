@@ -32,11 +32,23 @@ let helpEmbed = new Discord.RichEmbed()
 "** **")
 .addField(`.say [message]`, "Have the bot say something using RichEmbed.\n*(( Could be used for announcements, information, polls, etc ))*")
 .addField(".help", "Displays this message.")
-.addField("Want your own version?", "If so, join our server at https://discord.io/duziest and make a ticket to order your own.")
+.addField(".bot", "Displays bot info.")
 .setColor("#FFFFFF")
 .setTimestamp()
 .setFooter(`Coded by Duziest#5104`);
 message.channel.send(helpEmbed);
+break; 
+case "bot":
+let botEmbed = new Discord.RichEmbed()
+.addField("**Info**",
+"** **")
+.addField(`Bot Invite Link`, "https://discordapp.com/api/oauth2/authorize?client_id=527587824627613716&permissions=8&scope=bot")
+.addField("Support Server", "https://discord.gg/WFvePe9")
+.addField("Premium", "Order premium by making a ticket on our support server! Premium includes a custom profile picture, a custom name, a custom playing status, and more!")
+.setColor("#FFFFFF")
+.setTimestamp()
+.setFooter(`Coded by Duziest#5104`);
+message.channel.send(botEmbed);
 break;
 case "devleave":
     if(!message.member.id === "394249288005451776") return message.channel.send("Nope.");
